@@ -17,7 +17,6 @@ while True:
     print(lucroOrDespesa(qtPass, valorDaPass, despesa))
     qtA = viagensA(ident, qtA)
     qtPessoasDia23_12_22 = qtPessoasDia(ident, dataDaViagem, qtPessoasDia23_12_22, qtPass)
-
     qtMaiorTransporte, identMaiorTransporte = identMaior(qtPass, qtMaiorTransporte, identMaiorTransporte, ident)
 
 print('A quantidade de viagens realizadas pelo ônibus "A":', qtA)
