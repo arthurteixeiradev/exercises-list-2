@@ -15,16 +15,10 @@ while True:
     despesa = float(input('Despesa com a viagem: '))
 
     print(lucroOrDespesa(qtPass, valorDaPass, despesa))
+    qtA = viagensA(ident, qtA)
+    qtPessoasDia23_12_22 = qtPessoasDia(ident, dataDaViagem, qtPessoasDia23_12_22, qtPass)
 
-    if ident == 'A':
-        qtA = qtA + 1
-    
-    if ident == 'B' and dataDaViagem == '23/12/22':
-        qtPessoasDia23_12_22 = qtPessoasDia23_12_22 + qtPass
-
-    if qtPass > qtMaiorTransporte:
-        qtMaiorTransporte = qtPass
-        identMaiorTransporte = ident
+    qtMaiorTransporte, identMaiorTransporte = identMaior(qtPass, qtMaiorTransporte, identMaiorTransporte, ident)
 
 print('A quantidade de viagens realizadas pelo ônibus "A":', qtA)
 print('Quantidade de pessoas que viajou no ônibus "B" no dia "23/12/22"', qtPessoasDia23_12_22)
