@@ -13,11 +13,8 @@ while True:
 
     qtCamiseta = int(input('Quantidade de camisetas vendidas: '))
     print(calcular(nome, salario, qtCamiseta))
-    totalGastoPg = totalGastoPg + totalGasto(qtCamiseta, salario)
-    if qtCamiseta < menorQt:
-        menorQt = qtCamiseta
-        menorVendedor = nome
-    if qtCamiseta > maiorQt:
-        maiorQt = qtCamiseta
+    totalGastoPg = totalGastoPg + totalSalario(qtCamiseta, salario)
+    menorVendedor, menorQt = menorVender(qtCamiseta, menorQt, menorVendedor, nome)
+    maiorQt = maiorQtVendida(qtCamiseta, maiorQt)
 
 print('-'*60, '\nTotal gasto com pagamento dos vendedores: R$', totalGastoPg, '\nMenor vendedor:', menorVendedor, '\nMaior número de camisetas vendidas:', maiorQt, '\n', '-'*60)
